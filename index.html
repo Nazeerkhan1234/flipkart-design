@@ -60,6 +60,15 @@
         background-size: contain;
         background-position: right top;
       }
+      .n-form input[type="text"]:focus + div.input-box {
+        display: block !important;
+        height: 350px;
+        border-top: 1px solid rgb(208, 206, 206);
+        background-color: white;
+      }
+      .input-box a:hover{
+        background-color:hsla(0, 3%, 76%, 0.143);
+      }
     </style>
   </head>
   <body>
@@ -68,7 +77,7 @@
         <div class="header-top position-fixed w-100 top-0">
           <div class="container h-100">
             <div class="row ms-5 h-100">
-              <div class="col-1 h-100 p-1 x">
+              <div class="col-1 h-100 p-1">
                 <div class="d-grid">
                   <a href="#">
                     <img class="img-fluid" src="./img/logo.png" alt="" />
@@ -82,26 +91,83 @@
                   </a>
                 </div>
               </div>
-              <div class="col-6 x pt-2 pb-2">
-                <form class="bg-white h-100 rounded-1">
+              <div class="col-6 pt-2 pb-2">
+                <form class="bg-white h-100 rounded-1 position-relative n-form">
                   <div class="row">
-                    <div class="col-10">
+                    <div class="col-11">
+                      <div></div>
                       <input
                         type="text"
+                        style="box-shadow: none"
                         placeholder="search for products, brand and more"
                         class="form-control border-0"
                       />
+                      <div
+                        class="input-box position-absolute d-none w-100 shadow-sm"
+                      >
+                      <ul class="list-group list-group-flush">
+                        <li class="list-group-item border-0">
+                          discover more
+                          </li>
+                        <li class="list-group-item border-0 p-0">
+                            <a href="#" class="w-100  d-block p-3 text-secondary"><i class="fa-solid fa-magnifying-glass me-3"></i>An item</a>
+                        </li>
+                        <li class="list-group-item border-0 p-0 ">
+                          <a href="#" class="w-100  d-block p-3 text-secondary"><i class="fa-solid fa-magnifying-glass me-3"></i>A Second item</a>
+                      </li>
+                      <li class="list-group-item border-0 p-0 ">
+                        <a href="#" class="w-100  d-block p-3 text-secondary"><i class="fa-solid fa-magnifying-glass me-3"></i>A Third item</a>
+                    </li>
+                    <li class="list-group-item border-0 p-0 ">
+                      <a href="#" class="w-100  d-block p-3 text-secondary"><i class="fa-solid fa-magnifying-glass me-3"></i>A Fourth item</a>
+                  </li>
+                  <li class="list-group-item border-0 p-0 ">
+                    <a href="#" class="w-100  d-block p-3 text-secondary"><i class="fa-solid fa-magnifying-glass me-3"></i>A Fifth item</a>
+                </li>
+                <li class="list-group-item border-0 p-0 ">
+                  <a href="#" class="w-100  d-block p-3 text-secondary"><i class="fa-solid fa-magnifying-glass me-3"></i>A Sixth item</a>
+              </li>
+                
+                      </ul>
                     </div>
-                    <div class="col-2">
+                    </div>
+                    <div class="col-1">
                       <button
-                       type="submit" class="btn float-end">
-                        <i class="fa-solid fa-magnifying-glass text-primary"></i>
+                        style="border: none"
+                        type="submit"
+                        class="btn float-end"
+                      >
+                        <i
+                          class="fa-solid fa-magnifying-glass text-primary"
+                        ></i>
                       </button>
                     </div>
                   </div>
                 </form>
               </div>
-              <div class="col-5 x">hello</div>
+              <div class="col-5 x">
+
+
+                <ul class="nav h-100">
+                  <li class="nav-item">
+                    <a class="nav-link text-white active h-100 pt-3" aria-current="page" href="#">Login</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-white h-100 pt-3" href="#">Become a seller</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-white h-100 pt-3" href="#">More</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-white h-100 pt-3" href="#">
+                      <i class="fa-solid fa-cart-shopping"></i>
+                      Cart</a>
+                  </li>
+                </ul>
+
+
+                
+              </div>
             </div>
           </div>
         </div>
