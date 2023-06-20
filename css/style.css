@@ -1,5 +1,5 @@
 .x {
-    border: 1px solid black;
+    border: 1px solid red;
   }
   .header-top {
     height: 57px;
@@ -9,6 +9,9 @@
   .header-bottom {
     height: 113px;
     margin-top: 57px;
+  }
+  main{
+    height: 5775px;
   }
   main>section{
     height: 350px;
