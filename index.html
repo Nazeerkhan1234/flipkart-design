@@ -66,13 +66,49 @@
         border-top: 1px solid rgb(208, 206, 206);
         background-color: white;
       }
-      .input-box a:hover{
-        background-color:hsla(0, 3%, 76%, 0.143);
+      .input-box a:hover {
+        background-color: hsla(0, 3%, 76%, 0.143);
+      }
+      .n-submenu {
+        height: 300px;
+        width: 240px;
+        left: -80px;
+        top: 56px;
+      }
+      ul.n-menu > li:hover ul.n-submenu {
+        display: block !important;
+      }
+      .arrow-up {
+        width: 0;
+        height: 0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+
+        border-bottom: 10px solid white;
+        position: absolute;
+        left: 110px;
+        top: -10px;
+      }
+      ul.n-submenu ul.list-group li.list-group-item:hover {
+        background-color: #f1f3f6;
+      }
+      .carousel-control-next,
+      .carousel-control-prev {
+        width: 4%;
+        height: 35%;
+        top: 78px;
+        opacity: 1 !important;
+        background-color: white !important;
+      }
+
+      .section-2 {
+        height: 350px;
       }
     </style>
   </head>
   <body>
     <div class="container-fluid p-0">
+
       <header>
         <div class="header-top position-fixed w-100 top-0">
           <div class="container h-100">
@@ -105,31 +141,60 @@
                       <div
                         class="input-box position-absolute d-none w-100 shadow-sm"
                       >
-                      <ul class="list-group list-group-flush">
-                        <li class="list-group-item border-0">
-                          discover more
+                        <ul class="list-group list-group-flush">
+                          <li class="list-group-item border-0">
+                            discover more
                           </li>
-                        <li class="list-group-item border-0 p-0">
-                            <a href="#" class="w-100  d-block p-3 text-secondary"><i class="fa-solid fa-magnifying-glass me-3"></i>An item</a>
-                        </li>
-                        <li class="list-group-item border-0 p-0 ">
-                          <a href="#" class="w-100  d-block p-3 text-secondary"><i class="fa-solid fa-magnifying-glass me-3"></i>A Second item</a>
-                      </li>
-                      <li class="list-group-item border-0 p-0 ">
-                        <a href="#" class="w-100  d-block p-3 text-secondary"><i class="fa-solid fa-magnifying-glass me-3"></i>A Third item</a>
-                    </li>
-                    <li class="list-group-item border-0 p-0 ">
-                      <a href="#" class="w-100  d-block p-3 text-secondary"><i class="fa-solid fa-magnifying-glass me-3"></i>A Fourth item</a>
-                  </li>
-                  <li class="list-group-item border-0 p-0 ">
-                    <a href="#" class="w-100  d-block p-3 text-secondary"><i class="fa-solid fa-magnifying-glass me-3"></i>A Fifth item</a>
-                </li>
-                <li class="list-group-item border-0 p-0 ">
-                  <a href="#" class="w-100  d-block p-3 text-secondary"><i class="fa-solid fa-magnifying-glass me-3"></i>A Sixth item</a>
-              </li>
-                
-                      </ul>
-                    </div>
+                          <li class="list-group-item border-0 p-0">
+                            <a
+                              href="#"
+                              class="w-100 d-block p-3 text-secondary text-decoration-none"
+                              ><i class="fa-solid fa-magnifying-glass me-3"></i
+                              >Mobiles</a
+                            >
+                          </li>
+                          <li class="list-group-item border-0 p-0">
+                            <a
+                              href="#"
+                              class="w-100 d-block p-3 text-secondary text-decoration-none"
+                              ><i class="fa-solid fa-magnifying-glass me-3"></i
+                              >T-shirt</a
+                            >
+                          </li>
+                          <li class="list-group-item border-0 p-0">
+                            <a
+                              href="#"
+                              class="w-100 d-block p-3 text-secondary text-decoration-none"
+                              ><i class="fa-solid fa-magnifying-glass me-3"></i
+                              >Shoes</a
+                            >
+                          </li>
+                          <li class="list-group-item border-0 p-0">
+                            <a
+                              href="#"
+                              class="w-100 d-block p-3 text-secondary text-decoration-none"
+                              ><i class="fa-solid fa-magnifying-glass me-3"></i
+                              >Laptop</a
+                            >
+                          </li>
+                          <li class="list-group-item border-0 p-0">
+                            <a
+                              href="#"
+                              class="w-100 d-block p-3 text-secondary text-decoration-none"
+                              ><i class="fa-solid fa-magnifying-glass me-3"></i
+                              >Watch</a
+                            >
+                          </li>
+                          <li class="list-group-item border-0 p-0">
+                            <a
+                              href="#"
+                              class="w-100 d-block p-3 text-secondary text-decoration-none"
+                              ><i class="fa-solid fa-magnifying-glass me-3"></i
+                              >TV</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
                     </div>
                     <div class="col-1">
                       <button
@@ -145,28 +210,90 @@
                   </div>
                 </form>
               </div>
-              <div class="col-5 x">
+              <div class="col-5">
+                <ul class="nav h-100 n-menu">
+                  <li
+                    class="nav-item h-100 position-relative me-3"
+                    style="cursor: pointer"
+                  >
+                    <a
+                      class="nav-link pt-1 mt-3 bg-white active h-50 text-center"
+                      aria-current="page"
+                      href="#"
+                      >Login</a
+                    >
+                    <ul
+                      class="n-submenu bg-white shadow-sm position-absolute d-none"
+                    >
+                      <div class="arrow-up"></div>
+                      <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                          <a
+                            href="#"
+                            class="text-decoration-none text-secondary"
+                            >new customer?</a
+                          >
+                          <a href="#" class="float-end text-decoration-none"
+                            >sign up</a
+                          >
+                        </li>
+                        <li class="list-group-item">
+                          <a
+                            href="#"
+                            class="text-decoration-none text-secondary"
+                            ><i class="fa-solid fa-user me-3"></i>My profile</a
+                          >
+                        </li>
+                        <li class="list-group-item">
+                          <a
+                            href="#"
+                            class="text-decoration-none text-secondary"
+                            ><i class="fa-brands fa-first-order me-3"></i
+                            >Orders</a
+                          >
+                        </li>
 
+                        <li class="list-group-item">
+                          <a
+                            href="#"
+                            class="text-decoration-none text-secondary"
+                            ><i class="fa-solid fa-gift me-3"></i>Gift</a
+                          >
+                        </li>
 
-                <ul class="nav h-100">
-                  <li class="nav-item">
-                    <a class="nav-link text-white active h-100 pt-3" aria-current="page" href="#">Login</a>
+                        <li class="list-group-item">
+                          <a
+                            href="#"
+                            class="text-decoration-none text-secondary"
+                            ><i class="fa-solid fa-heart me-3"></i>Wishlist</a
+                          >
+                        </li>
+
+                        <li class="list-group-item">
+                          <a
+                            href="#"
+                            class="text-decoration-none text-secondary"
+                            >other</a
+                          >
+                        </li>
+                      </ul>
+                    </ul>
                   </li>
-                  <li class="nav-item">
-                    <a class="nav-link text-white h-100 pt-3" href="#">Become a seller</a>
+                  <li class="nav-item me-3">
+                    <a class="nav-link text-white h-100 pt-3" href="#"
+                      >Become a seller</a
+                    >
                   </li>
-                  <li class="nav-item">
+                  <li class="nav-item me-3">
                     <a class="nav-link text-white h-100 pt-3" href="#">More</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link text-white h-100 pt-3" href="#">
                       <i class="fa-solid fa-cart-shopping"></i>
-                      Cart</a>
+                      Cart</a
+                    >
                   </li>
                 </ul>
-
-
-                
               </div>
             </div>
           </div>
@@ -301,63 +428,261 @@
           </div>
         </div>
       </header>
-      <main class="x">
-        main
-        <div
-          id="carouselExampleAutoplaying"
-          class="carousel slide"
-          data-bs-ride="carousel"
-        >
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img
-                src="./img/main-slider/1.webp"
-                class="d-block w-100"
-                alt="img1"
-              />
+
+      <main class="x p-1">
+
+        <section class="section-1 mt-3">
+          <div
+            id="carouselExampleInterval"
+            class="carousel slide"
+            data-bs-ride="carousel"
+          >
+            <div class="carousel-inner">
+              <div class="carousel-item active" data-bs-interval="2000">
+                <img
+                  src="./img/main-slider/1.webp"
+                  class="d-block w-100"
+                  alt="..."
+                  style="height: 280px"
+                />
+              </div>
+              <div class="carousel-item" data-bs-interval="2000">
+                <img
+                  src="./img/main-slider/3.jpg"
+                  class="d-block w-100"
+                  alt="..."
+                  style="height: 280px"
+                />
+              </div>
+              <div class="carousel-item" data-bs-interval="2000">
+                <img
+                  src="./img/main-slider/1.jpg"
+                  class="d-block w-100"
+                  alt="..."
+                  style="height: 280px"
+                />
+              </div>
+
+              <div class="carousel-item" data-bs-interval="2000">
+                <img
+                  src="./img/main-slider/2.webp"
+                  class="d-block w-100"
+                  alt="..."
+                  style="height: 280px"
+                />
+              </div>
             </div>
-            <div class="carousel-item">
-              <img
-                src="./img/main-slider/2.webp"
-                class="d-block w-100"
-                alt="img2"
-              />
+            <button
+              class="carousel-control-prev rounded-end shadow-sm"
+              type="button"
+              data-bs-target="#carouselExampleInterval"
+              data-bs-slide="prev"
+            >
+              <i class="fa-solid fa-chevron-left text-dark fs-3"></i>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next rounded-start shadow-sm"
+              type="button"
+              data-bs-target="#carouselExampleInterval"
+              data-bs-slide="next"
+            >
+              <i class="fa-solid fa-chevron-right text-dark fs-3"></i>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </section>
+
+        <section class="section-2 mt-2 pt-1">
+          <div class="row m-0 h-100">
+            <div class="col-10 p-0 h-100">
+
+              <div class="row m-0 h-100">
+
+                <div class="col-2 p-0 text-center">
+                  <div class="align-items-center">
+                    <h3>Best of Electronics</h3>
+                    <button class="btn bg-primary rounded-0 text-white">
+                      view all
+                    </button>
+                  </div>
+                  <div class="mt-3">
+                    <img
+                      src="./img/Main/section-2/2.webp"
+                      class="img-fluid shadow-sm"
+                      alt=""
+                      style="height: 219px"
+                    />
+                  </div>
+                </div>
+
+                <div class="col-10 p-0 ps-1 h-100">
+                  <div
+                    id="carouselExampleInterval2"
+                    class="carousel slide h-100"
+                    data-bs-ride="carousel"
+                  >
+                    <div class="carousel-inner h-100">
+                      <div
+                        class="carousel-item active h-100"
+                        data-bs-interval="2000"
+                      >
+                      <div class="row p-0 h-100">
+                        <div class="col  h-100">
+                          
+                          <a href="#" class="h-100 d-block text-center text-decoration-none pt-5">
+                            <img src="./img/Main/section2-mid/1.webp" class="img-fluid">
+                            <h5 class="mt-4 text-dark">Monitor</h5>
+                            <div>From ₹999</div>
+                            <div class="fs-6 text-secondary">SAMSUNG</div>
+                          </a>
+                        </div>
+                        <div class="col  h-100">
+
+                          <a href="#" class="h-100 d-block text-center text-decoration-none pt-5">
+                            <img src="./img/Main/section2-mid/2.webp" class="img-fluid">
+                            <h5 class="mt-4 text-dark">Asus Monitor</h5>
+                            <div>From ₹4999</div>
+                            <div class="fs-6 text-secondary">Top Rated</div>
+                          </a>
+                        </div>
+                        <div class="col ">
+                          <a href="#" class="h-100 d-block text-center text-decoration-none pt-5">
+                            <img src="./img/Main/section2-mid/3.webp" class="img-fluid">
+                            <h5 class="mt-4 text-dark">Projectors</h5>
+                            <div>From ₹9999</div>
+                            <div class="fs-6 text-secondary">ZEBRONICS</div>
+                          </a>
+                        </div>
+                        <div class="col ">
+                          <a href="#" class="h-100 d-block text-center text-decoration-none pt-3">
+                            <img src="./img/Main/section2-mid/4.webp" class="img-fluid " style="height: 200px;">
+                            <h5 class="mt-3 text-dark">Best of Hair Dryers</h5>
+                            <div>From ₹549</div>
+                            <div class="fs-6 text-secondary">realme&philips</div>
+                          </a>
+                        </div>
+                      </div>
+
+                    </div>
+
+                      <div class="carousel-item h-100" data-bs-interval="2000">
+
+                        <div class="row p-0 h-100">
+                          <div class="col ">
+                            <a href="#" class="h-100 d-block text-center text-decoration-none pt-3">
+                              <img src="./img/Main/section2-mid/5.webp" class="img-fluid " style="height: 200px;">
+                              <h5 class="mt-4 text-dark">Premium PowerBank</h5>
+                              <div>Shop now</div>
+                              <div class="fs-6 text-secondary">mi,realme</div>
+                            </a>
+                          </div>
+                          <div class="col ">
+                            <a href="#" class="h-100 d-block text-center text-decoration-none pt-5">
+                              <img src="./img/Main/section2-mid/6.webp" class="img-fluid">
+                              <h5 class="mt-4 text-dark">Top Mirrorless cameras</h5>
+                              <div>Shop Now</div>
+                              <div class="fs-6 text-secondary">Canon,Sony</div>
+                            </a>
+                          </div>
+                          <div class="col "> <a href="#" class="h-100 d-block text-center text-decoration-none pt-3">
+                            <img src="./img/Main/section2-mid/7.webp" class="img-fluid" style="height: 200px;">
+                            <h5 class="mt-4 text-dark">Best of Shavers</h5>
+                            <div>From ₹1499</div>
+                            <div class="fs-6 text-secondary">Philips&Havells</div>
+                          </a></div>
+                          <div class="col ">
+                            <a href="#" class="h-100 d-block text-center text-decoration-none pt-5">
+                              <img src="./img/Main/section2-mid/8.webp" class="img-fluid" style="height: 150px;">
+                              <h5 class="mt-4 text-dark">Hair Straightners</h5>
+                              <div>From ₹279</div>
+                              <div class="fs-6 text-secondary">Nova,Vega</div>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="carousel-item h-100" data-bs-interval="2000">
+                        <div class="row p-0 h-100">
+                          <div class="col ">
+                            <a href="#" class="h-100 d-block text-center text-decoration-none pt-5">
+                              <img src="./img/Main/section2-mid/9.webp" class="img-fluid h-50">
+                              <h5 class="mt-4 text-dark">Womens Treamers</h5>
+                              <div>From ₹499</div>
+                              <div class="fs-6 text-secondary">VEET&PHILIPS</div>
+                            </a>
+                          </div>
+                          <div class="col ">
+                            <a href="#" class="h-100 d-block text-center text-decoration-none pt-5">
+                              <img src="./img/Main/section2-mid/1.webp" class="img-fluid">
+                              <h5 class="mt-4 text-dark">Monitor</h5>
+                              <div>From ₹9999</div>
+                              <div class="fs-6 text-secondary">SAMSUNG</div>
+                            </a>
+                          </div>
+                          <div class="col ">
+                            <a href="#" class="h-100 d-block text-center text-decoration-none pt-5">
+                              <img src="./img/Main/section2-mid/3.webp" class="img-fluid">
+                              <h5 class="mt-4 text-dark">PROJECTORS</h5>
+                              <div>From ₹9999</div>
+                              <div class="fs-6 text-secondary">ZEBRONICS</div>
+                            </a>
+                          </div>
+                          <div class="col ">
+                            <a href="#" class="h-100 d-block text-center text-decoration-none pt-5">
+                              <img src="./img/Main/section2-mid/6.webp" class="img-fluid">
+                              <h5 class="mt-4 text-dark">Top Mirrorless Cameras</h5>
+                              <div>Shop Now</div>
+                              <div class="fs-6 text-secondary">Canon,Sony</div>
+                            </a>
+                          </div>
+                        </div>
+
+                      </div>
+
+                    </div>
+                    <button
+                      class="carousel-control-prev rounded-end shadow-sm"
+                      type="button"
+                      data-bs-target="#carouselExampleInterval2"
+                      data-bs-slide="prev"
+                    >
+                      <i class="fa-solid fa-chevron-left text-dark fs-3"></i>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button
+                      class="carousel-control-next rounded-start shadow-sm"
+                      type="button"
+                      data-bs-target="#carouselExampleInterval2"
+                      data-bs-slide="next"
+                    >
+                      <i class="fa-solid fa-chevron-right text-dark fs-3"></i>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="carousel-item">
-              <img
-                src="./img/main-slider/3.webp"
-                class="d-block w-100"
-                alt="img3"
-              />
-            </div>
-            <div class="carousel-item">
-              <img
-                src="./img/main-slider/4.webp"
-                class="d-block w-100"
-                alt="img3"
-              />
+            <div class="col-2 pe-1 ps-1">
+              <a href="#">
+                <img
+                  src="./img/Main/section-2/1.webp"
+                  alt=""
+                  class="img-fluid img-thumbnail pt-1"
+                  style="height: 344px"
+                />
+              </a>
             </div>
           </div>
-          <button
-            class="carousel-control-prev"
-            type="button"
-            data-bs-target="#carouselExampleAutoplaying"
-            data-bs-slide="prev"
-          >
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button
-            class="carousel-control-next"
-            type="button"
-            data-bs-target="#carouselExampleAutoplaying"
-            data-bs-slide="next"
-          >
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
-        </div>
+        </section>
+
+        <section class="section-3 mt-2 x">hii</section>
+
+        <section class="section-4 mt-2 x">hii</section>
+
+        <section class="section-5 mt-3 x">hii</section>
       </main>
+
       <footer>
         <div class="x footer-top">footer top</div>
         <div class="x footer-bottom">
@@ -368,16 +693,15 @@
     </div>
 
     <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/    bootstrap.bundle.min.js"
-      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
-      crossorigin="anonymous"
-    ></script>
-
-    <script
       src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"
       integrity="sha512-fD9DI5bZwQxOi7MhYWnnNPlvXdp/2Pj3XSTRrFs5FQa4mizyGLnJcN6tuvUS6LbmgN1ut+XGSABKvjN0H6Aoow=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
     ></script>
   </body>
 </html>
